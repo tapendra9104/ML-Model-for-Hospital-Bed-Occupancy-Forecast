@@ -1,0 +1,213 @@
+{
+  "info": {
+    "name": "Hospital Bed Occupancy Forecasting API",
+    "_postman_id": "a3b4d9f2-9a3c-4fd2-a4f4-2fe4c31d4f10",
+    "description": "Postman collection for authentication, forecasting, dataset ingestion, thresholds, alert history, and scenario simulation.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://127.0.0.1:8000" },
+    { "key": "token", "value": "" },
+    { "key": "scenarioId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Public",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/health", "host": ["{{baseUrl}}"], "path": ["health"] }
+          }
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const payload = pm.response.json();",
+                  "pm.collectionVariables.set('token', payload.token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Authenticated",
+      "item": [
+        {
+          "name": "Who Am I",
+          "request": {
+            "method": "GET",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": { "raw": "{{baseUrl}}/api/auth/me", "host": ["{{baseUrl}}"], "path": ["api", "auth", "me"] }
+          }
+        },
+        {
+          "name": "Dashboard",
+          "request": {
+            "method": "GET",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": {
+              "raw": "{{baseUrl}}/api/dashboard?horizon_hours=72",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "dashboard"],
+              "query": [{ "key": "horizon_hours", "value": "72" }]
+            }
+          }
+        },
+        {
+          "name": "ICU Forecast",
+          "request": {
+            "method": "GET",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": {
+              "raw": "{{baseUrl}}/api/forecast/icu?horizon_hours=48",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "forecast", "icu"],
+              "query": [{ "key": "horizon_hours", "value": "48" }]
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": { "raw": "{{baseUrl}}/api/auth/logout", "host": ["{{baseUrl}}"], "path": ["api", "auth", "logout"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Get Thresholds",
+          "request": {
+            "method": "GET",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": { "raw": "{{baseUrl}}/api/admin/thresholds", "host": ["{{baseUrl}}"], "path": ["api", "admin", "thresholds"] }
+          }
+        },
+        {
+          "name": "Update Thresholds",
+          "request": {
+            "method": "PUT",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"thresholds\": {\n    \"icu\": 0.88,\n    \"ward\": 0.91,\n    \"emergency\": 0.9,\n    \"pediatric\": 0.87\n  }\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/admin/thresholds", "host": ["{{baseUrl}}"], "path": ["api", "admin", "thresholds"] }
+          }
+        },
+        {
+          "name": "Alert History",
+          "request": {
+            "method": "GET",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/alerts/history?limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "admin", "alerts", "history"],
+              "query": [{ "key": "limit", "value": "20" }]
+            }
+          }
+        },
+        {
+          "name": "Dataset Metadata",
+          "request": {
+            "method": "GET",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": { "raw": "{{baseUrl}}/api/admin/datasets/metadata", "host": ["{{baseUrl}}"], "path": ["api", "admin", "datasets", "metadata"] }
+          }
+        },
+        {
+          "name": "Ingest Event-Level HIS CSV",
+          "request": {
+            "method": "POST",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataset_name\": \"Sample HIS Upload\",\n  \"csv_text\": \"patient_id,admission_time,discharge_time,department,admission_type\\nP10001,2026-01-12T08:15:00,2026-01-13T09:30:00,General Ward,Scheduled\\nP10002,2026-01-12T08:40:00,2026-01-12T18:00:00,Emergency Department,Emergency\\nP10003,2026-01-12T09:05:00,2026-01-14T15:45:00,ICU,Emergency\\nP10004,2026-01-12T10:20:00,2026-01-13T12:10:00,Pediatric Ward,Emergency\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/admin/datasets/ingest", "host": ["{{baseUrl}}"], "path": ["api", "admin", "datasets", "ingest"] }
+          }
+        },
+        {
+          "name": "Retrain Models",
+          "request": {
+            "method": "POST",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": { "raw": "{{baseUrl}}/api/admin/models/retrain", "host": ["{{baseUrl}}"], "path": ["api", "admin", "models", "retrain"] }
+          }
+        },
+        {
+          "name": "Create Scenario",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const payload = pm.response.json();",
+                  "pm.collectionVariables.set('scenarioId', payload.id);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Influenza surge\",\n  \"description\": \"Simulate increased emergency inflow and outbreak pressure.\",\n  \"admissions_multiplier\": 1.15,\n  \"discharges_multiplier\": 0.95,\n  \"emergency_multiplier\": 1.25,\n  \"outbreak_delta\": 0.2,\n  \"occupancy_delta\": 4,\n  \"duration_hours\": 72\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/admin/scenarios", "host": ["{{baseUrl}}"], "path": ["api", "admin", "scenarios"] }
+          }
+        },
+        {
+          "name": "List Scenarios",
+          "request": {
+            "method": "GET",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": { "raw": "{{baseUrl}}/api/admin/scenarios", "host": ["{{baseUrl}}"], "path": ["api", "admin", "scenarios"] }
+          }
+        },
+        {
+          "name": "Simulate Scenario",
+          "request": {
+            "method": "POST",
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/scenarios/{{scenarioId}}/simulate?horizon_hours=72",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "admin", "scenarios", "{{scenarioId}}", "simulate"],
+              "query": [{ "key": "horizon_hours", "value": "72" }]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

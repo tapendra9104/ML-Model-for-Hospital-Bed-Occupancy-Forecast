@@ -1,0 +1,20 @@
+{
+  "profile": "Community Care Hospital",
+  "event_dataset": "community_care_his_events.csv",
+  "aggregate_dataset": "community_care_hourly_occupancy.csv",
+  "rows": 8860,
+  "hourly_rows": 2939,
+  "metadata": {
+    "source_name": "Community Care Hospital",
+    "source_type": "event_level_his",
+    "rows": 2939,
+    "coverage_start": "2025-01-01T00:00:00",
+    "coverage_end": "2025-05-03T10:00:00",
+    "capacities": {
+      "icu": 50,
+      "ward": 260,
+      "emergency": 75,
+      "pediatric": 45
+    }
+  }
+}

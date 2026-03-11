@@ -1,0 +1,11 @@
+patient_id,admission_time,discharge_time,department,admission_type
+P10001,2026-01-12T08:15:00,2026-01-13T09:30:00,General Ward,Scheduled
+P10002,2026-01-12T08:40:00,2026-01-12T18:00:00,Emergency Department,Emergency
+P10003,2026-01-12T09:05:00,2026-01-14T15:45:00,ICU,Emergency
+P10004,2026-01-12T10:20:00,2026-01-13T12:10:00,Pediatric Ward,Emergency
+P10005,2026-01-12T11:35:00,2026-01-15T14:00:00,General Ward,Scheduled
+P10006,2026-01-12T12:05:00,2026-01-12T20:20:00,Emergency Department,Emergency
+P10007,2026-01-12T13:10:00,2026-01-16T08:25:00,ICU,Transfer
+P10008,2026-01-12T14:00:00,2026-01-13T10:00:00,Pediatric Ward,Scheduled
+P10009,2026-01-12T15:25:00,2026-01-14T11:45:00,General Ward,Observation
+P10010,2026-01-12T16:55:00,2026-01-13T07:40:00,Emergency Department,Emergency

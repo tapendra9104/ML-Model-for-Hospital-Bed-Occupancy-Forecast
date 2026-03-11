@@ -1,0 +1,20 @@
+{
+  "profile": "Metro General Hospital",
+  "event_dataset": "metro_general_his_events.csv",
+  "aggregate_dataset": "metro_general_hourly_occupancy.csv",
+  "rows": 19208,
+  "hourly_rows": 3710,
+  "metadata": {
+    "source_name": "Metro General Hospital",
+    "source_type": "event_level_his",
+    "rows": 3710,
+    "coverage_start": "2025-01-01T00:00:00",
+    "coverage_end": "2025-06-04T13:00:00",
+    "capacities": {
+      "icu": 50,
+      "ward": 260,
+      "emergency": 90,
+      "pediatric": 45
+    }
+  }
+}

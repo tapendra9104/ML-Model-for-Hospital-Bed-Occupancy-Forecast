@@ -1,0 +1,20 @@
+{
+  "profile": "Pediatric Specialty Center",
+  "event_dataset": "pediatric_specialty_his_events.csv",
+  "aggregate_dataset": "pediatric_specialty_hourly_occupancy.csv",
+  "rows": 12965,
+  "hourly_rows": 3435,
+  "metadata": {
+    "source_name": "Pediatric Specialty Center",
+    "source_type": "event_level_his",
+    "rows": 3435,
+    "coverage_start": "2025-01-01T01:00:00",
+    "coverage_end": "2025-05-24T03:00:00",
+    "capacities": {
+      "icu": 50,
+      "ward": 260,
+      "emergency": 75,
+      "pediatric": 85
+    }
+  }
+}
