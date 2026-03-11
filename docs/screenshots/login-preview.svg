@@ -1,0 +1,33 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="900" fill="#08131C"/>
+  <rect x="0" y="0" width="1440" height="900" fill="url(#paint0_linear)"/>
+  <circle cx="1200" cy="140" r="260" fill="#68D3C0" fill-opacity="0.12"/>
+  <circle cx="220" cy="760" r="220" fill="#F96F5D" fill-opacity="0.12"/>
+  <rect x="420" y="132" width="600" height="636" rx="36" fill="#0D2231" fill-opacity="0.9" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <text x="492" y="218" fill="#68D3C0" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">SECURE ACCESS</text>
+  <text x="492" y="282" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">Hospital occupancy</text>
+  <text x="492" y="332" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">command center</text>
+  <text x="492" y="392" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Authenticate to access live forecasts, alert history, thresholds,</text>
+  <text x="492" y="422" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="20">scenario simulation, and HIS retraining controls.</text>
+  <text x="492" y="500" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Username</text>
+  <rect x="492" y="520" width="456" height="68" rx="20" fill="#102B3C" stroke="#1A3C51"/>
+  <text x="520" y="563" fill="#EFF5FB" font-family="Consolas, monospace" font-size="22">admin</text>
+  <text x="492" y="638" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Password</text>
+  <rect x="492" y="658" width="456" height="68" rx="20" fill="#102B3C" stroke="#1A3C51"/>
+  <text x="520" y="701" fill="#EFF5FB" font-family="Consolas, monospace" font-size="22">**********</text>
+  <rect x="492" y="742" width="456" height="72" rx="24" fill="#68D3C0"/>
+  <text x="657" y="788" fill="#08131C" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Sign in</text>
+  <rect x="100" y="130" width="220" height="160" rx="26" fill="#0E2434" fill-opacity="0.78" stroke="#1C425A"/>
+  <text x="128" y="178" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18">Current release</text>
+  <text x="128" y="224" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">v0.3.0</text>
+  <text x="128" y="262" fill="#68D3C0" font-family="Segoe UI, Arial, sans-serif" font-size="18">Secured admin workflow</text>
+  <rect x="1116" y="636" width="220" height="140" rx="26" fill="#0E2434" fill-opacity="0.78" stroke="#1C425A"/>
+  <text x="1148" y="684" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18">Data source</text>
+  <text x="1148" y="730" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Hospital HIS</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="117" y1="52" x2="1315" y2="868" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1822"/>
+      <stop offset="1" stop-color="#13364A"/>
+    </linearGradient>
+  </defs>
+</svg>

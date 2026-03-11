@@ -1,0 +1,71 @@
+<svg width="1600" height="1180" viewBox="0 0 1600 1180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1180" fill="#08131C"/>
+  <rect x="0" y="0" width="1600" height="1180" fill="url(#paint0_linear)"/>
+  <circle cx="1380" cy="160" r="240" fill="#68D3C0" fill-opacity="0.1"/>
+  <circle cx="180" cy="980" r="220" fill="#F96F5D" fill-opacity="0.08"/>
+  <rect x="64" y="52" width="1472" height="164" rx="32" fill="#0D2231" fill-opacity="0.9" stroke="#1A3C51"/>
+  <text x="108" y="104" fill="#68D3C0" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">HOSPITAL OPERATIONS INTELLIGENCE</text>
+  <text x="108" y="156" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Machine Learning Based Hospital Bed Occupancy Forecasting System</text>
+  <text x="108" y="194" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18">Data source: Hospital HIS Export. Last retrain: Mar 11, 2026, 10:58 AM.</text>
+  <rect x="1248" y="94" width="220" height="76" rx="22" fill="#102B3C" stroke="#1C425A"/>
+  <text x="1278" y="126" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="14">SIGNED IN AS</text>
+  <text x="1278" y="154" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">admin</text>
+
+  <rect x="64" y="248" width="330" height="142" rx="28" fill="#0D2231" fill-opacity="0.88" stroke="#1A3C51"/>
+  <rect x="420" y="248" width="330" height="142" rx="28" fill="#0D2231" fill-opacity="0.88" stroke="#1A3C51"/>
+  <rect x="776" y="248" width="330" height="142" rx="28" fill="#0D2231" fill-opacity="0.88" stroke="#1A3C51"/>
+  <rect x="1132" y="248" width="404" height="142" rx="28" fill="#0D2231" fill-opacity="0.88" stroke="#1A3C51"/>
+  <text x="96" y="292" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18">Total beds</text>
+  <text x="96" y="354" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700">425</text>
+  <text x="452" y="292" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18">Occupied now</text>
+  <text x="452" y="354" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700">318</text>
+  <text x="808" y="292" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18">Available</text>
+  <text x="808" y="354" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700">107</text>
+  <text x="1164" y="292" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="18">Highest forecasted risk</text>
+  <text x="1164" y="354" fill="#F96F5D" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="700">ICU 92%</text>
+
+  <rect x="64" y="430" width="1032" height="382" rx="32" fill="#0D2231" fill-opacity="0.9" stroke="#1A3C51"/>
+  <text x="104" y="480" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Forecast window: next 72 hours</text>
+  <text x="104" y="516" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="16">ICU selected. Model output includes occupancy projections and threshold crossings.</text>
+  <polyline points="126,732 232,688 338,642 444,612 550,566 656,524 762,488 868,468 974,442" fill="none" stroke="#68D3C0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="126,760 232,746 338,738 444,724 550,704 656,696 762,680 868,662 974,654" fill="none" stroke="#4F8EF7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <line x1="126" y1="620" x2="974" y2="620" stroke="#F96F5D" stroke-width="4" stroke-dasharray="12 12"/>
+  <text x="986" y="624" fill="#F96F5D" font-family="Segoe UI, Arial, sans-serif" font-size="16">alert threshold</text>
+  <line x1="126" y1="764" x2="974" y2="764" stroke="#1C425A"/>
+  <line x1="126" y1="564" x2="974" y2="564" stroke="#102B3C"/>
+  <line x1="126" y1="364" x2="974" y2="364" stroke="#102B3C"/>
+  <text x="124" y="790" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="14">Now</text>
+  <text x="900" y="790" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="14">+72h</text>
+
+  <rect x="1128" y="430" width="408" height="382" rx="32" fill="#0D2231" fill-opacity="0.9" stroke="#1A3C51"/>
+  <text x="1168" y="480" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Active alerts</text>
+  <rect x="1168" y="526" width="328" height="92" rx="22" fill="#2A1F1D" stroke="#6A3127"/>
+  <text x="1196" y="564" fill="#F96F5D" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">ICU capacity likely to exceed 90%</text>
+  <text x="1196" y="596" fill="#F6C4BE" font-family="Segoe UI, Arial, sans-serif" font-size="16">Estimated breach in 8 hours</text>
+  <rect x="1168" y="638" width="328" height="92" rx="22" fill="#132932" stroke="#1C425A"/>
+  <text x="1196" y="676" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Emergency inflow rising</text>
+  <text x="1196" y="708" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="16">Admissions multiplier +1.15</text>
+
+  <rect x="64" y="850" width="466" height="266" rx="32" fill="#0D2231" fill-opacity="0.88" stroke="#1A3C51"/>
+  <rect x="566" y="850" width="466" height="266" rx="32" fill="#0D2231" fill-opacity="0.88" stroke="#1A3C51"/>
+  <rect x="1068" y="850" width="468" height="266" rx="32" fill="#0D2231" fill-opacity="0.88" stroke="#1A3C51"/>
+  <text x="96" y="900" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Threshold management</text>
+  <text x="96" y="940" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="16">ICU 0.90  |  Ward 0.91  |  Emergency 0.90  |  Pediatric 0.87</text>
+  <rect x="96" y="978" width="160" height="54" rx="18" fill="#68D3C0"/>
+  <text x="141" y="1012" fill="#08131C" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Save</text>
+  <text x="598" y="900" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Dataset ingestion</text>
+  <text x="598" y="940" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="16">Current source: Hospital HIS Export</text>
+  <text x="598" y="970" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="16">Supported: event-level and aggregated hourly CSV</text>
+  <rect x="598" y="1000" width="168" height="54" rx="18" fill="#102B3C" stroke="#1C425A"/>
+  <text x="633" y="1034" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Retrain</text>
+  <text x="1100" y="900" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Scenario simulation</text>
+  <text x="1100" y="940" fill="#C6D2DF" font-family="Segoe UI, Arial, sans-serif" font-size="16">Influenza surge  |  +15% admissions  |  +25% emergency</text>
+  <rect x="1100" y="978" width="184" height="54" rx="18" fill="#102B3C" stroke="#1C425A"/>
+  <text x="1146" y="1012" fill="#EFF5FB" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Run scenario</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="112" y1="74" x2="1462" y2="1106" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1822"/>
+      <stop offset="1" stop-color="#13364A"/>
+    </linearGradient>
+  </defs>
+</svg>

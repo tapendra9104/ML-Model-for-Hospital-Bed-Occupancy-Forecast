@@ -35,7 +35,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Hospital Bed Occupancy Forecasting API",
-    version="0.2.0",
+    version="0.3.0",
     description="Forecasting, authentication, and scenario modeling API for hospital bed occupancy.",
     lifespan=lifespan,
 )
